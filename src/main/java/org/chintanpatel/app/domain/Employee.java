@@ -50,7 +50,7 @@ public class Employee {
     private String mobile;
 
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "yyyy/MM/dd")
+    @DateTimeFormat(pattern="yyyy/MM/dd")
     @NotNull(message = "NotNull.employee.birthDate")
     @Column(name = "birth_date", nullable = false)
     private String birthDate;
