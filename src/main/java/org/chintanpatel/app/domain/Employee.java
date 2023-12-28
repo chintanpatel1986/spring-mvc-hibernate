@@ -70,7 +70,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int employeeId, String firstName, String middleName, String lastName, String address, String gender, @NotEmpty(message = "NotEmpty.employee.programmingSkill") String[] programmingSkill, String email, String mobile, Date birthDate, String userName, String password) {
+    public Employee(int employeeId, String firstName, String middleName, String lastName, String address, String gender, String[] programmingSkill, String email, String mobile, Date birthDate, String userName, String password) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.middleName = middleName;
