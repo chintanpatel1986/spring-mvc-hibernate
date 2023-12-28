@@ -49,9 +49,9 @@ public class Employee {
     @Column(name = "mobile", nullable = false)
     private String mobile;
 
+    @NotEmpty(message = "NotEmpty.employee.birthDate")
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy/MM/dd")
-    @NotNull(message = "NotNull.employee.birthDate")
     @Column(name = "birth_date", nullable = false)
     private String birthDate;
 
