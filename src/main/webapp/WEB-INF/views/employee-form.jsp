@@ -157,7 +157,7 @@
                             </c:forEach>
                         </td>
                         <td>${employee.email}</td>
-                        <td><fmt:formatDate pattern="yyyy/MM/dd" value="${employee.birthDate}" /></td>
+                        <td><fmt:formatDate value="${employee.birthDate}" pattern="yyyy/MM/dd"/></td>
                         <td>${employee.userName}</td>
                         <td>
                             <a href="${editLink}" class="link-success">Edit</a>
