@@ -7,6 +7,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "tbl_employee")
 public class Employee {
@@ -54,7 +56,7 @@ public class Employee {
     @DateTimeFormat(pattern = "yyyy/MM/dd")
     @NotNull(message = "NotNull.employee.birthDate")
     @Column(name = "birth_date", nullable = false)
-    private String birthDate;
+    private Date birthDate;
 
     @NotEmpty(message = "NotEmpty.employee.userName")
     @Column(name = "user_name", nullable = false)
@@ -68,7 +70,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int employeeId, String firstName, String middleName, String lastName, String address, String gender, String[] programmingSkill, String email, String mobile, String birthDate, String userName, String password) {
+    public Employee(int employeeId, String firstName, String middleName, String lastName, String address, String gender, @NotEmpty(message = "NotEmpty.employee.programmingSkill") String[] programmingSkill, String email, String mobile, Date birthDate, String userName, String password) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -155,11 +157,11 @@ public class Employee {
         this.mobile = mobile;
     }
 
-    public String getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
