@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -61,6 +62,7 @@ public class Employee {
     private String userName;
 
     @NotEmpty(message = "NotEmpty.employee.password")
+    @Size(min = 8, max = 15, message = "Size.employee.password")
     @Column(name = "password", nullable = false)
     private String password;
 
