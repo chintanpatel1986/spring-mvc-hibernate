@@ -18,6 +18,11 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
+    @GetMapping("/home")
+    public String home() {
+        return "index";
+    }
+
     @GetMapping("/listEmployee")
     public String listEmployee(Model model) {
         model.addAttribute("employee", new Employee());
