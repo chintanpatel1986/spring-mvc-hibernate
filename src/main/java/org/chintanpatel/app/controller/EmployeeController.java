@@ -3,7 +3,6 @@ package org.chintanpatel.app.controller;
 import jakarta.validation.Valid;
 import org.chintanpatel.app.domain.Employee;
 import org.chintanpatel.app.service.EmployeeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
