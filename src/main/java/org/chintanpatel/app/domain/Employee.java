@@ -62,7 +62,7 @@ public class Employee {
     private String userName;
 
     @NotEmpty(message = "NotEmpty.employee.password")
-    @Size(min = 8, max = 15, message = "Size.employee.password")
+    @Size(min = 8, max = 15, message = "Size.employee.password¸")
     @Column(name = "password", nullable = false)
     private String password;
 
