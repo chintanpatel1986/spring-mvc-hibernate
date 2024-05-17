@@ -91,7 +91,7 @@
             </div>
             <div class="col-4">
                 <form:label path="email" cssClass="form-label fw-semibold">E-Mail</form:label>
-                <form:label path="email" cssClass="form-control"/>
+                <form:input path="email" cssClass="form-control"/>
                 <form:errors path="email" cssStyle="color: red"/>
             </div>
             <div class="col-4">
@@ -115,7 +115,7 @@
                 <form:errors path="password" cssStyle="color: red"/>
             </div>
             <div class="col-12 d-grid gap-2">
-                <button type="submit" class="btn btn-success">Success</button>
+                <button type="submit" class="btn btn-success">Submit</button>
             </div>
         </form:form>
     </div>
